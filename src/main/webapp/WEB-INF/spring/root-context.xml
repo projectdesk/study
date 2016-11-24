@@ -9,10 +9,11 @@
  <context:property-placeholder location="/WEB-INF/spring/oracle.properties" />
  <bean id="dataSource"
   class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-  <property name="driverClassName" value="${driver}" />
-  <property name="url" value="${url}" />
-  <property name="username" value="${user}" />
-  <property name="password" value="${password}" />
+  <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+  <property name="url" value="mysql://localhost:3306/kmoon" />
+  <property name="connectionProperties" value="characterEncoding=utf8;"></property>
+  <property name="username" value="bkm8547" />
+  <property name="password" value="q2vpraHv4hEb" />
  </bean>
  <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
   <property name="dataSource" ref="dataSource" />
